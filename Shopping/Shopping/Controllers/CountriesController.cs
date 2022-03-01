@@ -1,10 +1,5 @@
 ﻿#nullable disable
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Shopping.Data;
 using Shopping.Data.Entities;
@@ -15,7 +10,7 @@ namespace Shopping.Controllers
     {
         private readonly DataContext _context;
 
-        public CountriesController(DataContext context)
+        public CountriesController(DataContext context) //Inyección de dependencias
         {
             _context = context;
         }
